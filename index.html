@@ -1,115 +1,219 @@
-<!DOCTYPE html>   < !DOCTYPE html>
-<html lang="zh-CN">   < css长= " zh-CN" >
-<head>   < head   头>
-    <meta charset="UTF-8">   <meta   元 charset   字符集   字符集="UTF-8"   "UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"><meta   元 name   名字   名字="viewport"   "viewport" content="width=device-width, initial-scale=1.0">
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>民航医疗快线 - 专业医疗转运</title>
-    <style>   < style   风格>
+    <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: "Microsoft Yahei", sans-serif;
+            font-family: "Microsoft Yahei", "PingFang SC", sans-serif;
         }
+
         body {
-            background-color: #f4f7fa;
+            background-color: #f7f8fa;
+            padding-bottom: 70px;
         }
-        /* 头部区域 */
-        .header {
-            background: linear-gradient(135deg, #2c5c97, #4a7cad);
-            color: white;   颜色:白色;
-            padding: 50px 20px;
-            text-align: center;   text-align:中心;
-        }
-        .header h1 {
-            font-size: 26px;
-            line-height: 1.5;
-            margin-bottom: 20px;
-        }
-        .header p {
-            font-size: 16px;
-            line-height: 1.8;
-            margin-bottom: 30px;
-            opacity: 0.9;
-        }
-        /* 自动拨号按钮 */
-        .call-btn {
-            display: inline-block;
-            background-color: #ff4d4f;
-            color: white;
-            padding: 14px 35px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-size: 18px;
-            font-weight: bold;
-            box-shadow: 0 4px 12px rgba(255, 77, 79, 0.3);
-        }
-        /* 服务项目 */
-        .service {
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
-        .service h2 {
+
+        /* 顶部主视觉区 —— 救护车+直升机+民航飞机背景 */
+        .hero {
+            background: linear-gradient(rgba(54, 111, 156, 0.75), rgba(54, 111, 156, 0.75)), 
+                        url('https://tse4-mm.cn.bing.net/th/id/OIP.8l84G5dQ4lM0F8bOu8x7GgHaEo?rs=1&pid=ImgDetMain');
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            color: #fff;
+            padding: 45px 20px;
             text-align: center;
-            color: #2c5c97;
+            position: relative;
+        }
+
+        .hero .title {
             font-size: 28px;
-            margin-bottom: 30px;
-            padding-bottom: 10px;
-            border-bottom: 3px solid #2c5c97;
-        }
-        .service-item {
-            background-color: white;
-            border-radius: 12px;
-            padding: 25px;
+            font-weight: bold;
+            line-height: 1.4;
             margin-bottom: 20px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            position: relative;
+            z-index: 2;
         }
-        .service-item h3 {
-            color: #2c5c97;
-            font-size: 22px;
-            margin-bottom: 15px;
-            text-align: center;
-        }
-        .service-item p {
+        .hero .sub-title {
             font-size: 16px;
             line-height: 1.7;
-            color: #555;
+            margin-bottom: 28px;
+            position: relative;
+            z-index: 2;
         }
-        /* 底部信息 */
-        .footer {
-            text-align: center;   text-align:中心;
-            padding: 30px 20px;
-            color: #666;
+        .call-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background-color: #ff4545;
+            color: #fff;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 14px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(255, 69, 69, 0.3);
+            position: relative;
+            z-index: 2;
         }
-    </style>   < / style>
-</head>   < / head>
-<body>   < body   身体>
-    <div class="header">   <div class   类="header"   "header">
-        <h1>专业医疗转运 · 国内外航空转运<br>全程生命守护</h1>
-        <p>24小时全国救护车转运 | 重症护送 | 出院转院<br>民航担架 | 国内外航空转运 | 安全直达</p >
-        <!-- 点击自动拨号按钮 -->
-        <a href=" " class="call-btn">📞 立即拨打救援热线</a >
-    </div>   < / div>
+        .call-btn::before {
+            content: "📞";
+            font-size: 20px;
+        }
 
-    <div class="service">
-        <h2>核心服务项目</h2>
-        <div class="service-item">
-            <h3>长途跨省转运</h3>
-            <p>覆盖全国各省市，专业救护车全程护送，满足重症、康复患者长途转院、返乡需求。</p >
-        </div>   < / div>
-        <div class="service-item">
-            <h3>重症监护护送</h3>
-            <p>配备专业医护人员与急救设备，为重症患者提供安全、高效的转院护送服务。</p >
-        </div>   < / div>
-        <div class="service-item">
-            <h3>国内外航空转运</h3>
-            <p>提供民航担架、医疗专机等航空转运方案，实现跨地区、跨国界的医疗转运。</p >
-        </div>   < / div>
+        /* 核心服务区域 */
+        .service-section {
+            padding: 35px 18px;
+        }
+        .service-title {
+            font-size: 26px;
+            color: #2b5c87;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        .service-title::after {
+            content: "";
+            width: 100%;
+            max-width: 260px;
+            height: 3px;
+            background-color: #2b5c87;
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        /* 服务卡片 */
+        .service-list {
+            margin-top: 25px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        .service-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 24px 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+        .service-card h3 {
+            font-size: 22px;
+            color: #2b5c87;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 12px;
+        }
+        .service-card p {
+            font-size: 15px;
+            line-height: 1.8;
+            color: #444;
+            text-align: center;
+        }
+
+        /* 底部信息 */
+        .footer-info {
+            text-align: center;
+            font-size: 14px;
+            color: #666;
+            margin: 25px 0;
+        }
+
+        /* 底部导航 */
+        .footer-nav {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 62px;
+            background-color: #fff;
+            border-top: 1px solid #eee;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            z-index: 999;
+        }
+        .nav-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            font-size: 11px;
+            text-decoration: none;
+            gap: 3px;
+        }
+        .nav-item span {
+            font-size: 21px;
+        }
+        .nav-item.active {
+            color: #366f9c;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 顶部主视觉区（救护车+直升机+民航飞机背景） -->
+    <div class="hero">
+        <div class="title">专业医疗转运·国内外航空转运<br>全程生命守护</div>
+        <div class="sub-title">
+            24小时全国救护车转运 | 重症护送 | 出院转院<br>
+            民航担架 | 国内外航空转运 | 安全直达
+        </div>
+        <a href="tel:13798229110" class="call-btn">立即拨打救援热线</a>
     </div>
 
-    <div class="footer">   <div class   类="footer"   "footer">
-        <p>民航医疗快线 | 广东深圳 | 24小时服务</p >
-    </div>   < / div>
-</body>   < / body>
-</html>   < / html>
+    <!-- 核心服务项目（新增高铁转运） -->
+    <div class="service-section">
+        <div class="service-title">核心服务项目</div>
+        
+        <div class="service-list">
+            <div class="service-card">
+                <h3>🚑 长途跨省转运</h3>
+                <p>覆盖全国各省市，专业救护车全程护送，满足重症、康复患者长途转院、返乡需求。</p>
+            </div>
+
+            <div class="service-card">
+                <h3>🏥 重症监护护送</h3>
+                <p>配备专业医护人员与急救设备，为重症患者提供安全、高效的转院护送服务。</p>
+            </div>
+
+            <div class="service-card">
+                <h3>✈️ 国内外航空转运</h3>
+                <p>提供民航担架、医疗专机等航空转运方案，实现跨地区、跨国界的医疗转运。</p>
+            </div>
+
+            <!-- 新增：高铁转运 -->
+            <div class="service-card">
+                <h3>🚄 高铁医疗转运</h3>
+                <p>提供高铁担架、医护陪同转运服务，适合中长途平稳转运，安全舒适、准时高效。</p>
+            </div>
+        </div>
+
+        <div class="footer-info">
+            民航医疗快线 | 广东深圳 | 24小时服务
+        </div>
+    </div>
+
+    <!-- 底部导航 -->
+    <div class="footer-nav">
+        <a href="javascript:;" class="nav-item active">
+            <span>🏠</span>
+            <div>首页</div>
+        </a>
+        <a href="tel:13798229110" class="nav-item">
+            <span>📞</span>
+            <div>一键拨号</div>
+        </a>
+        <a href="javascript:;" class="nav-item">
+            <span>📋</span>
+            <div>服务介绍</div>
+        </a>
+    </div>
+</body>
+</html>
